@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./public/favicon.ico">
+    <title>Creative Web</title>
+</head>
+
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center;gap: .5rem;">
+        <h1>Creative Web</h1>
+        <div>
+            <button id="btn-reload">Reload</button>
+        </div>
+        <div>
+            <button id="btn-access">Allow sensors</button>
+        </div>
+        <p id="debug" style="display: none;"></p>
+    </div>
+    <div class="container">
+        <canvas id="canvas-scene" class="scene"></canvas>
+        <canvas id="canvas-scene-3d" class="scene"></canvas>
+        <canvas id="canvas-scene-2" class="scene"></canvas>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+
+<style>
+    body {
+        background-color: black;
+        height: 300vh;
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        font-style: italic;
+        color: white;
+        line-height: 1.4em;
+        font-size: 1.5rem;
+    }
+
+    button {
+        border: solid white 1px;
+        background-color: transparent;
+        text-transform: uppercase;
+        color: white;
+        padding-inline: 2em;
+        padding-block: 1em;
+        border-radius: 2em;
+    }
+    button:active {
+        background-color: white;
+        color: black;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-block: 1rem;
+        width: 100%;
+    }
+
+    .scene {
+        border: solid white;
+        width: 40%;
+        height: 30vh;
+    }
+</style>
+
+</html>
